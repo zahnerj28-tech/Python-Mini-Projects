@@ -1,5 +1,5 @@
 # Title:  	Mad Libs
-# Author: 	Thomas Luong
+# Author: 	Josh Zahner 
 # Purpose:	Creates a story based on verbs, adjectives and nouns that the user inputs
 # Usage:	Practice python functions and reusability
 
@@ -40,6 +40,10 @@ You married this person and now you have __(number)__ kids.  And a pet __(animal
 '''
 
 from time import sleep
+
+#Define Start Time 
+now = datetime.datetime.now()
+
 def madlibs():
 	print("Madlibs starting, please enter the words below: ")
 	print("------------------------------------------------")
@@ -52,34 +56,37 @@ def madlibs():
 	adjective = input("An adjective to describe someone you like: ")
 	number = input("A number from one to 50: ")
 	greeting = input("A greeting to your good friend: ")
+	verbMove = input("A verb describing movement that ends in 's' (e.g., jumps, floats, runs): ")
+	adverbKiss = input("An adverb (a word ending in -ly, like quickly or gently): ")
 
 	print("\n------------------------------------------------")
 	print("Word gathering complete.  Creating story...")
 	sleep(5)
-	print("\n\nYour hands feel " + touchAdj + ".  You wake up and open your eyes slowly. ")
+	print("\nYour skin feels " + touchadj + "as you wake up inside a strange mental chamber.")
 	sleep(2)
-	print("While lying down you raise your head.")
+	print("You rub your " + bodypart + " and realize you're aboard a spaceship drifting through the stars.")
 	sleep(2)
-	print("Glancing down at your " + bodyPart + ", you then see a " + animal + " licking your fingers.  ")
+	print("Suddenly, a small " + animal + " floats into the room, wearing a tiny space helmet.")
 	sleep(2)
-	print("It says " + animalSound + ".")
+	print("It makes a strange noise: '" + animalSound + ",' which echoes through the cabin.")
 	sleep(2)
-	print("You decide to kiss it.")
+	print("Before you can react, the creature " + vertMove + " through zero gravity toward you.")
 	sleep(1)
-	print("The next thing you know, the " + animal + " is enveloped by an intense "+ color + " light.  ")
+	print("You watch " + adverbKiss + " as the " + animal + " begins to glow with a pulsing " + color + " light.")
 	sleep(2)
-	print("It flickers for a while and is now only flickering dimly.")	
+	print("The glow intensifies until the entire chamber is filled with swirling colors.")	
 	sleep(2)
-	print("Once the light is gone, the " + animal + " that was there before... ")
+	print("When the light fades, the " + animal + " is gone-replaced by a " + adjective + " human.")
 	sleep(2)
-	print("...is now a " + adjective + " human looking back at you.")
+	print("Together, you explore distant planets, discovering new worlds and raising " + number + "cosmic children-")
 	sleep(2)
 	print("The person says, \"" + greeting + " my name is " + name + ", and I love you.\"")
 	sleep(2)
-	print("You married this person and now you have " + number + " kids.  And a pet " + animal + ".")
+	print("All while your old friend, the " + animal + ", watches over your adventures from the stars.")
 	sleep(2)
 
-	print("\nThe end.\n\n")
+	print(("\nTime to generate story: " + str(datetime.datetime.now()-now)
+	print("\nThe End.\n\n")
 
 madlibs()
 
